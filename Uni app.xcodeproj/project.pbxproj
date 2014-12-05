@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6018C241A2FFA0300DA1D9E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C6018C231A2FFA0300DA1D9E /* Reachability.m */; };
 		C61C99371A2235950090AFFB /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C61C99361A2235950090AFFB /* ProfileViewController.m */; };
 		C61C993A1A223AC90090AFFB /* facebook_blank_face3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C61C99391A223AC90090AFFB /* facebook_blank_face3.jpeg */; };
-		C61C993C1A223AD30090AFFB /* according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C61C993B1A223AD30090AFFB /* according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.jpg */; };
 		C61C994A1A2247B80090AFFB /* calendarview.png in Resources */ = {isa = PBXBuildFile; fileRef = C61C99401A2247B80090AFFB /* calendarview.png */; };
 		C61C994B1A2247B80090AFFB /* createown.png in Resources */ = {isa = PBXBuildFile; fileRef = C61C99411A2247B80090AFFB /* createown.png */; };
 		C61C994C1A2247B80090AFFB /* leaderboard.png in Resources */ = {isa = PBXBuildFile; fileRef = C61C99421A2247B80090AFFB /* leaderboard.png */; };
@@ -71,6 +71,24 @@
 		C6AB80711A20C88F00E7468C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB80681A20C88F00E7468C /* Icon@2x.png */; };
 		C6AB80721A20C88F00E7468C /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB80691A20C88F00E7468C /* iTunesArtwork.png */; };
 		C6AB80731A20C88F00E7468C /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB806A1A20C88F00E7468C /* iTunesArtwork@2x.png */; };
+		C6AB840F1A31D87300CF27BF /* TraditionCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB840E1A31D87300CF27BF /* TraditionCollectionViewController.m */; };
+		C6AB84121A31D90500CF27BF /* DetailTraditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB84111A31D90500CF27BF /* DetailTraditionViewController.m */; };
+		C6AB84211A31E3BF00CF27BF /* tradition1.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB84141A31E3BF00CF27BF /* tradition1.png */; };
+		C6AB84221A31E3BF00CF27BF /* tradition2.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB84151A31E3BF00CF27BF /* tradition2.png */; };
+		C6AB84231A31E3BF00CF27BF /* tradition3.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB84161A31E3BF00CF27BF /* tradition3.png */; };
+		C6AB84241A31E3BF00CF27BF /* tradition4.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB84171A31E3BF00CF27BF /* tradition4.png */; };
+		C6AB84251A31E3BF00CF27BF /* tradition5.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB84181A31E3BF00CF27BF /* tradition5.png */; };
+		C6AB84261A31E3BF00CF27BF /* tradition6.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB84191A31E3BF00CF27BF /* tradition6.png */; };
+		C6AB84271A31E3BF00CF27BF /* tradition7.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB841A1A31E3BF00CF27BF /* tradition7.png */; };
+		C6AB84281A31E3BF00CF27BF /* tradition8.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB841B1A31E3BF00CF27BF /* tradition8.png */; };
+		C6AB84291A31E3BF00CF27BF /* tradition9.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB841C1A31E3BF00CF27BF /* tradition9.png */; };
+		C6AB842A1A31E3BF00CF27BF /* tradition10.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB841D1A31E3BF00CF27BF /* tradition10.png */; };
+		C6AB842B1A31E3BF00CF27BF /* tradition11.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB841E1A31E3BF00CF27BF /* tradition11.png */; };
+		C6AB842C1A31E3BF00CF27BF /* tradition12.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB841F1A31E3BF00CF27BF /* tradition12.png */; };
+		C6AB842D1A31E3BF00CF27BF /* tradition13.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB84201A31E3BF00CF27BF /* tradition13.png */; };
+		C6AB842F1A31E84D00CF27BF /* according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB842E1A31E84D00CF27BF /* according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.png */; };
+		C6AB84311A32243500CF27BF /* SignUp.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AB84301A32243500CF27BF /* SignUp.plist */; };
+		C6AB84331A32297E00CF27BF /* emptyBG.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB84321A32297E00CF27BF /* emptyBG.png */; };
 		C6C3B1CF1A28C736008926F8 /* CreateOwnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C3B1CE1A28C736008926F8 /* CreateOwnViewController.m */; };
 		C6C3B1D61A28CA6F008926F8 /* MyTraditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C3B1D51A28CA6F008926F8 /* MyTraditionViewController.m */; };
 		C6C3B1D91A28CA82008926F8 /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C3B1D81A28CA82008926F8 /* PictureViewController.m */; };
@@ -92,10 +110,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C6018C221A2FFA0300DA1D9E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C6018C231A2FFA0300DA1D9E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C61C99351A2235950090AFFB /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
 		C61C99361A2235950090AFFB /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
 		C61C99391A223AC90090AFFB /* facebook_blank_face3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = facebook_blank_face3.jpeg; sourceTree = "<group>"; };
-		C61C993B1A223AD30090AFFB /* according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.jpg"; sourceTree = "<group>"; };
 		C61C99401A2247B80090AFFB /* calendarview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendarview.png; sourceTree = "<group>"; };
 		C61C99411A2247B80090AFFB /* createown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = createown.png; sourceTree = "<group>"; };
 		C61C99421A2247B80090AFFB /* leaderboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaderboard.png; sourceTree = "<group>"; };
@@ -168,6 +187,26 @@
 		C6AB80681A20C88F00E7468C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		C6AB80691A20C88F00E7468C /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		C6AB806A1A20C88F00E7468C /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		C6AB840D1A31D87300CF27BF /* TraditionCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraditionCollectionViewController.h; sourceTree = "<group>"; };
+		C6AB840E1A31D87300CF27BF /* TraditionCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraditionCollectionViewController.m; sourceTree = "<group>"; };
+		C6AB84101A31D90500CF27BF /* DetailTraditionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTraditionViewController.h; sourceTree = "<group>"; };
+		C6AB84111A31D90500CF27BF /* DetailTraditionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTraditionViewController.m; sourceTree = "<group>"; };
+		C6AB84141A31E3BF00CF27BF /* tradition1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradition1.png; sourceTree = "<group>"; };
+		C6AB84151A31E3BF00CF27BF /* tradition2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradition2.png; sourceTree = "<group>"; };
+		C6AB84161A31E3BF00CF27BF /* tradition3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradition3.png; sourceTree = "<group>"; };
+		C6AB84171A31E3BF00CF27BF /* tradition4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradition4.png; sourceTree = "<group>"; };
+		C6AB84181A31E3BF00CF27BF /* tradition5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradition5.png; sourceTree = "<group>"; };
+		C6AB84191A31E3BF00CF27BF /* tradition6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradition6.png; sourceTree = "<group>"; };
+		C6AB841A1A31E3BF00CF27BF /* tradition7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradition7.png; sourceTree = "<group>"; };
+		C6AB841B1A31E3BF00CF27BF /* tradition8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradition8.png; sourceTree = "<group>"; };
+		C6AB841C1A31E3BF00CF27BF /* tradition9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradition9.png; sourceTree = "<group>"; };
+		C6AB841D1A31E3BF00CF27BF /* tradition10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradition10.png; sourceTree = "<group>"; };
+		C6AB841E1A31E3BF00CF27BF /* tradition11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradition11.png; sourceTree = "<group>"; };
+		C6AB841F1A31E3BF00CF27BF /* tradition12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradition12.png; sourceTree = "<group>"; };
+		C6AB84201A31E3BF00CF27BF /* tradition13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradition13.png; sourceTree = "<group>"; };
+		C6AB842E1A31E84D00CF27BF /* according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.png"; sourceTree = "<group>"; };
+		C6AB84301A32243500CF27BF /* SignUp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SignUp.plist; sourceTree = "<group>"; };
+		C6AB84321A32297E00CF27BF /* emptyBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyBG.png; sourceTree = "<group>"; };
 		C6C3B1CD1A28C736008926F8 /* CreateOwnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateOwnViewController.h; sourceTree = "<group>"; };
 		C6C3B1CE1A28C736008926F8 /* CreateOwnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateOwnViewController.m; sourceTree = "<group>"; };
 		C6C3B1D41A28CA6F008926F8 /* MyTraditionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTraditionViewController.h; sourceTree = "<group>"; };
@@ -215,7 +254,7 @@
 		C61C99381A223AB90090AFFB /* Profile Pic */ = {
 			isa = PBXGroup;
 			children = (
-				C61C993B1A223AD30090AFFB /* according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.jpg */,
+				C6AB842E1A31E84D00CF27BF /* according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.png */,
 				C61C99391A223AC90090AFFB /* facebook_blank_face3.jpeg */,
 			);
 			name = "Profile Pic";
@@ -389,9 +428,31 @@
 			name = "App Icon";
 			sourceTree = "<group>";
 		};
+		C6AB84131A31E36B00CF27BF /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				C6AB84141A31E3BF00CF27BF /* tradition1.png */,
+				C6AB84151A31E3BF00CF27BF /* tradition2.png */,
+				C6AB84161A31E3BF00CF27BF /* tradition3.png */,
+				C6AB84171A31E3BF00CF27BF /* tradition4.png */,
+				C6AB84181A31E3BF00CF27BF /* tradition5.png */,
+				C6AB84191A31E3BF00CF27BF /* tradition6.png */,
+				C6AB841A1A31E3BF00CF27BF /* tradition7.png */,
+				C6AB841B1A31E3BF00CF27BF /* tradition8.png */,
+				C6AB841C1A31E3BF00CF27BF /* tradition9.png */,
+				C6AB841D1A31E3BF00CF27BF /* tradition10.png */,
+				C6AB841E1A31E3BF00CF27BF /* tradition11.png */,
+				C6AB841F1A31E3BF00CF27BF /* tradition12.png */,
+				C6AB84201A31E3BF00CF27BF /* tradition13.png */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
 		C6C3B1D01A28C9C2008926F8 /* Login-Registration */ = {
 			isa = PBXGroup;
 			children = (
+				C6AB84321A32297E00CF27BF /* emptyBG.png */,
+				C6AB84301A32243500CF27BF /* SignUp.plist */,
 				C661179A1A2563800087B8BF /* RegistrationViewController.h */,
 				C661179B1A2563800087B8BF /* RegistrationViewController.m */,
 				C66117971A25636F0087B8BF /* LoginViewController.h */,
@@ -404,6 +465,8 @@
 		C6C3B1D11A28C9D8008926F8 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				C6018C221A2FFA0300DA1D9E /* Reachability.h */,
+				C6018C231A2FFA0300DA1D9E /* Reachability.m */,
 				C661178E1A24F9EB0087B8BF /* SWRevealViewController.h */,
 				C661178F1A24F9EB0087B8BF /* SWRevealViewController.m */,
 			);
@@ -431,6 +494,11 @@
 		C6C3B1E01A28CAA5008926F8 /* Tradition */ = {
 			isa = PBXGroup;
 			children = (
+				C6AB84131A31E36B00CF27BF /* Photos */,
+				C6AB84101A31D90500CF27BF /* DetailTraditionViewController.h */,
+				C6AB84111A31D90500CF27BF /* DetailTraditionViewController.m */,
+				C6AB840D1A31D87300CF27BF /* TraditionCollectionViewController.h */,
+				C6AB840E1A31D87300CF27BF /* TraditionCollectionViewController.m */,
 				C6C3B1DD1A28CA9B008926F8 /* CalenderViewController.h */,
 				C6C3B1DE1A28CA9B008926F8 /* CalenderViewController.m */,
 				C6C3B1DA1A28CA8E008926F8 /* ListViewController.h */,
@@ -542,17 +610,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6AB84311A32243500CF27BF /* SignUp.plist in Resources */,
 				C630DBC91A1FA7E60080B380 /* all_bg.jpg in Resources */,
 				C630DBD61A1FB0380080B380 /* splash_logo.png in Resources */,
-				C61C993C1A223AD30090AFFB /* according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.jpg in Resources */,
 				C61C994D1A2247B80090AFFB /* listview.png in Resources */,
 				C630DBA41A1FA6B70080B380 /* Main_iPad.storyboard in Resources */,
 				C6AB806C1A20C88F00E7468C /* Icon-72.png in Resources */,
 				C61C99531A2247B80090AFFB /* profile.png in Resources */,
+				C6AB84221A31E3BF00CF27BF /* tradition2.png in Resources */,
 				C630DBA91A1FA6B70080B380 /* Images.xcassets in Resources */,
+				C6AB84211A31E3BF00CF27BF /* tradition1.png in Resources */,
 				C61C99521A2247B80090AFFB /* logout.png in Resources */,
+				C6AB842C1A31E3BF00CF27BF /* tradition12.png in Resources */,
 				C630DBE21A203D050080B380 /* email.png in Resources */,
+				C6AB84331A32297E00CF27BF /* emptyBG.png in Resources */,
 				C6AB806B1A20C88F00E7468C /* Icon-60.png in Resources */,
+				C6AB842F1A31E84D00CF27BF /* according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.png in Resources */,
 				C630DBD41A1FB0140080B380 /* login_bg.jpg in Resources */,
 				C6AB806D1A20C88F00E7468C /* Icon-72@2x.png in Resources */,
 				C630DBE31A203D050080B380 /* home.png in Resources */,
@@ -562,18 +635,24 @@
 				C630DBD11A1FAD340080B380 /* Default@2x.png in Resources */,
 				C630DBD21A1FAD340080B380 /* slpash.png in Resources */,
 				C630DBE51A203D050080B380 /* web.png in Resources */,
+				C6AB84291A31E3BF00CF27BF /* tradition9.png in Resources */,
 				C630DBD01A1FAD340080B380 /* Default.png in Resources */,
+				C6AB84281A31E3BF00CF27BF /* tradition8.png in Resources */,
 				C630DBA11A1FA6B70080B380 /* Main_iPhone.storyboard in Resources */,
 				C66117951A24FC0C0087B8BF /* menu.png in Resources */,
+				C6AB842B1A31E3BF00CF27BF /* tradition11.png in Resources */,
 				C630DB981A1FA6B70080B380 /* InfoPlist.strings in Resources */,
 				C61C99501A2247B80090AFFB /* pictureview.png in Resources */,
 				C630DBCF1A1FAD340080B380 /* Default-568h@2x.png in Resources */,
+				C6AB842D1A31E3BF00CF27BF /* tradition13.png in Resources */,
 				C61C99511A2247B80090AFFB /* about.png in Resources */,
 				C61C994F1A2247B80090AFFB /* mytraditions.png in Resources */,
 				C6AB80731A20C88F00E7468C /* iTunesArtwork@2x.png in Resources */,
+				C6AB84231A31E3BF00CF27BF /* tradition3.png in Resources */,
 				C630DBC61A1FA7BA0080B380 /* splash_bg.jpg in Resources */,
 				C630DBE71A20400C0080B380 /* create_your_own.png in Resources */,
 				C61C994A1A2247B80090AFFB /* calendarview.png in Resources */,
+				C6AB84241A31E3BF00CF27BF /* tradition4.png in Resources */,
 				C61C99581A2261590090AFFB /* gradient.png in Resources */,
 				C66117961A24FC0C0087B8BF /* menu@2x.png in Resources */,
 				C61C994C1A2247B80090AFFB /* leaderboard.png in Resources */,
@@ -581,11 +660,15 @@
 				C61C994E1A2247B80090AFFB /* menudrawerlogo.png in Resources */,
 				C6AB80701A20C88F00E7468C /* Icon.png in Resources */,
 				C630DBD81A1FB4DC0080B380 /* sign_UP_logo.png in Resources */,
+				C6AB84261A31E3BF00CF27BF /* tradition6.png in Resources */,
 				C6AB806E1A20C88F00E7468C /* Icon-Small-50.png in Resources */,
 				C6AB806F1A20C88F00E7468C /* Icon-Small-50@2x.png in Resources */,
 				C61C994B1A2247B80090AFFB /* createown.png in Resources */,
+				C6AB84271A31E3BF00CF27BF /* tradition7.png in Resources */,
+				C6AB84251A31E3BF00CF27BF /* tradition5.png in Resources */,
 				C630DBDC1A2030A90080B380 /* signup_form_bg.png in Resources */,
 				C630DBDA1A202C860080B380 /* uni_logo.png in Resources */,
+				C6AB842A1A31E3BF00CF27BF /* tradition10.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +697,9 @@
 				C66117921A24F9EB0087B8BF /* SWRevealViewController.m in Sources */,
 				C66117911A24F9EB0087B8BF /* SidebarViewController.m in Sources */,
 				C66117991A25636F0087B8BF /* LoginViewController.m in Sources */,
+				C6018C241A2FFA0300DA1D9E /* Reachability.m in Sources */,
+				C6AB840F1A31D87300CF27BF /* TraditionCollectionViewController.m in Sources */,
+				C6AB84121A31D90500CF27BF /* DetailTraditionViewController.m in Sources */,
 				C6C3B1E31A28CAEB008926F8 /* LogoutViewController.m in Sources */,
 				C6C3B1E61A28CB11008926F8 /* CreateOwnListViewController.m in Sources */,
 				C6C3B1DF1A28CA9B008926F8 /* CalenderViewController.m in Sources */,
