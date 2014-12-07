@@ -8,7 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailTraditionViewController : UIViewController
+@interface DetailTraditionViewController : UIViewController<UIImagePickerControllerDelegate>{
+    
+    UIImagePickerController *imagePickerController;
+    IBOutlet UIImageView *imageView;
+    UIImage *imageOfThing;
+    
+}
+
+@property (strong, nonatomic) IBOutlet UILabel *captionLabel;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *uploadPhotoActivity;
+@property (strong, nonatomic) IBOutlet UIButton *takePhotoButton;
+
+- (IBAction)takePhotoAction:(UIButton *)sender;
+- (IBAction)uploadPhotoAction:(UIButton *)sender;
+
+
+
+// --- previous Code
 
     @property(strong) UIImage *img;
     @property (weak, nonatomic) IBOutlet UIImageView *traditionImageView;

@@ -1782,6 +1782,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="takePhotoAction:" destination="BPd-57-QTn" eventType="touchUpInside" id="B9f-C0-4En"/>
+                                </connections>
                             </button>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCE-Yi-ClO">
                                 <rect key="frame" x="164" y="283" width="150" height="36"/>
@@ -1792,9 +1795,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="uploadPhotoAction:" destination="BPd-57-QTn" eventType="touchUpInside" id="lQJ-0m-1eR"/>
+                                </connections>
                             </button>
                             <textView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" tag="31" contentMode="scaleToFill" fixedFrame="YES" text="  Description" translatesAutoresizingMaskIntoConstraints="NO" id="hHN-ca-4oh">
-                                <rect key="frame" x="5" y="327" width="310" height="107"/>
+                                <rect key="frame" x="5" y="327" width="310" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1813,6 +1819,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="shareLinkWithShareDialog:" destination="BPd-57-QTn" eventType="touchUpInside" id="fdT-ro-QgR"/>
+                                        </connections>
                                     </button>
                                     <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5w-nj-q28">
                                         <rect key="frame" x="121" y="18" width="68" height="30"/>
@@ -1836,20 +1845,37 @@
                                 <color key="backgroundColor" red="0.56470588239999997" green="0.37647058820000001" blue="0.6588235294" alpha="1" colorSpace="deviceRGB"/>
                             </view>
                             <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWA-zz-LbZ">
-                                <rect key="frame" x="5" y="442" width="310" height="21"/>
+                                <rect key="frame" x="0.0" y="394" width="150" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDv-g2-1XX">
+                                <rect key="frame" x="158" y="394" width="156" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <activityIndicatorView appearanceType="aqua" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="GBD-ZL-DKO">
+                                <rect key="frame" x="142" y="153" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Traidtion" id="AnY-up-9Pw"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="captionField" destination="PDv-g2-1XX" id="ZRe-Xb-ptj"/>
+                        <outlet property="captionLabel" destination="SWA-zz-LbZ" id="DxY-he-UJd"/>
+                        <outlet property="imageView" destination="dcI-JC-wds" id="yLk-gD-HJE"/>
+                        <outlet property="shareobject" destination="Wsb-6B-mp2" id="53h-xI-krb"/>
+                        <outlet property="takePhotoButton" destination="LZD-Be-Dee" id="xGI-TY-S8u"/>
                         <outlet property="traditionImageView" destination="dcI-JC-wds" id="SsF-au-XD7"/>
                         <outlet property="traditionName" destination="SWA-zz-LbZ" id="OHi-3h-U23"/>
+                        <outlet property="uploadButton" destination="GCE-Yi-ClO" id="uSV-PU-shR"/>
+                        <outlet property="uploadPhotoActivity" destination="GBD-ZL-DKO" id="zLF-Tk-Cn1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dZ-tV-Gql" userLabel="First Responder" sceneMemberID="firstResponder"/>
