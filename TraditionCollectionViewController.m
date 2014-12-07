@@ -29,7 +29,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    //NSLog(@"Count = %lu",(unsigned long)traditionPhotos.count);
+    NSLog(@"Count = %lu",(unsigned long)traditionPhotos.count);
     return traditionPhotos.count;
 }
 
@@ -42,7 +42,7 @@
     
     UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
     recipeImageView.image = [UIImage imageNamed:[traditionPhotos objectAtIndex:indexPath.row]];
-    
+    NSLog(@"recipeImageView.image = %@",recipeImageView.image);
     return cell;
 }
 

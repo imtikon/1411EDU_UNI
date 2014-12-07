@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateOwnViewController : UIViewController
+@interface CreateOwnViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
+@property (strong, nonatomic) IBOutlet UITextField *eventNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *eventDateField;
+@property (strong, nonatomic) IBOutlet UITextField *eventDetailsField;
+
+- (IBAction)saveOwnTradition:(id)sender;
+- (IBAction)uploadPhoto:(id)sender;
 
 @end

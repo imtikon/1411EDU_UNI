@@ -166,9 +166,9 @@
         }
         case 4:
             NSLog(@"you released graduation year field.");
-//            if (![self.graduationTxt.text isEqualToString:@""]) {
-//                self.graduationTxt.text = @"  Graduation Year";
-//            }
+            if (![self.graduationTxt.text isEqualToString:@""]) {
+                self.graduationTxt.text = @"  Graduation Year";
+            }
             [textField resignFirstResponder];
             break;
 //        case 4:

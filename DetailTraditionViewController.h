@@ -12,8 +12,11 @@
 
     @property(strong) UIImage *img;
     @property (weak, nonatomic) IBOutlet UIImageView *traditionImageView;
+    @property (weak, nonatomic) IBOutlet UILabel *traditionName;
     @property (weak, nonatomic) NSString *traditionImageName;
     @property (weak, nonatomic) NSString *traditionImageId;
+
+    @property (strong, nonatomic) IBOutlet UITextView *traditionImageCaption;
 
     - (IBAction)closeView:(id)sender;
 
