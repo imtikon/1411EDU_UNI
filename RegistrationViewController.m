@@ -271,8 +271,8 @@
             [errorMessage show];
             
         } else {
-            
-            NSURL *url = [NSURL URLWithString:@"http://imtikon.com/apps/uni/register.php"];
+            //http://imtikon.com/apps/uni/register.php
+            NSURL *url = [NSURL URLWithString:@"http://4axiz.com/tradition/uni_tradition/for_android/php_files/user_registration.php"];
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
             [request setURL:url];
             [request setHTTPMethod:@"POST"];
@@ -281,6 +281,13 @@
             [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
             NSMutableData *body = [NSMutableData data];
             
+            //machine_code = emran4axiz
+            [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+            [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"machine_code\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+            [body appendData:[[NSString stringWithFormat:@"%@",@"emran4axiz"] dataUsingEncoding:NSUTF8StringEncoding]];
+            [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+            
+            
             [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
             [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"name\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
             [body appendData:[[NSString stringWithFormat:@"%@",self.nameTextField.text] dataUsingEncoding:NSUTF8StringEncoding]];
@@ -288,12 +295,12 @@
             
             [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
             [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"email\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-            [body appendData:[[NSString stringWithFormat:@"%@",self.graduationTxt.text] dataUsingEncoding:NSUTF8StringEncoding]];
+            [body appendData:[[NSString stringWithFormat:@"%@",self.emailTextField.text] dataUsingEncoding:NSUTF8StringEncoding]];
             [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
             
             [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-            [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"graduationyear\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-            [body appendData:[[NSString stringWithFormat:@"%@",self.emailTextField.text] dataUsingEncoding:NSUTF8StringEncoding]];
+            [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"semester\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+            [body appendData:[[NSString stringWithFormat:@"%@",self.graduationTxt.text] dataUsingEncoding:NSUTF8StringEncoding]];
             [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
             
             [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
@@ -328,7 +335,7 @@
                                   error:&error];
             //            if ([returnString rangeOfString:@"success"].location == NSNotFound || [returnString rangeOfString:@"exists"].location == NSNotFound)
             //            {
-            
+            NSLog(@"---json--- = %@",json);
             if([[json objectForKey:@"message"] isEqualToString:@"success"] || [[json objectForKey:@"message"] isEqualToString:@"exists"])
             {
                 NSLog(@"success");
@@ -339,6 +346,7 @@
                 NSDictionary *deserializedDictionary = nil;
                 if (jsonObject != nil && error == nil)
                 {
+                    
                     if ([jsonObject isKindOfClass:[NSDictionary class]]){
                         //Convert the NSData to NSDictionary in this final step
                         deserializedDictionary = (NSDictionary *)jsonObject;

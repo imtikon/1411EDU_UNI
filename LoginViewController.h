@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController<UITextFieldDelegate>
+@interface LoginViewController : UIViewController<UITextFieldDelegate>{
+
+    NSString *userId, *userName, *userEmail, *userPic;
+    NSMutableArray *userDict;
+    
+}
+@property (nonatomic, retain) NSString *userId;
+@property (nonatomic, retain) NSString *userName;
+@property (nonatomic, retain) NSString *userEmail;
+@property (nonatomic, retain) NSString *userPic;
+@property (nonatomic, retain) NSMutableArray *userDict;
+
 
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;

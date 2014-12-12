@@ -89,6 +89,7 @@
 		C6AB842F1A31E84D00CF27BF /* according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB842E1A31E84D00CF27BF /* according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.png */; };
 		C6AB84311A32243500CF27BF /* SignUp.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AB84301A32243500CF27BF /* SignUp.plist */; };
 		C6AB84331A32297E00CF27BF /* emptyBG.png in Resources */ = {isa = PBXBuildFile; fileRef = C6AB84321A32297E00CF27BF /* emptyBG.png */; };
+		C6C0D5FE1A3AA3CC00F92A85 /* user.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6C0D5FD1A3AA3CC00F92A85 /* user.plist */; };
 		C6C3B1CF1A28C736008926F8 /* CreateOwnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C3B1CE1A28C736008926F8 /* CreateOwnViewController.m */; };
 		C6C3B1D61A28CA6F008926F8 /* MyTraditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C3B1D51A28CA6F008926F8 /* MyTraditionViewController.m */; };
 		C6C3B1D91A28CA82008926F8 /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C3B1D81A28CA82008926F8 /* PictureViewController.m */; };
@@ -211,6 +212,7 @@
 		C6AB842E1A31E84D00CF27BF /* according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "according-to-science-these-are-the-best-photos-to-use-in-your-dating-profile.png"; sourceTree = "<group>"; };
 		C6AB84301A32243500CF27BF /* SignUp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SignUp.plist; sourceTree = "<group>"; };
 		C6AB84321A32297E00CF27BF /* emptyBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyBG.png; sourceTree = "<group>"; };
+		C6C0D5FD1A3AA3CC00F92A85 /* user.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = user.plist; sourceTree = "<group>"; };
 		C6C3B1CD1A28C736008926F8 /* CreateOwnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateOwnViewController.h; sourceTree = "<group>"; };
 		C6C3B1CE1A28C736008926F8 /* CreateOwnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateOwnViewController.m; sourceTree = "<group>"; };
 		C6C3B1D41A28CA6F008926F8 /* MyTraditionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTraditionViewController.h; sourceTree = "<group>"; };
@@ -468,6 +470,7 @@
 			isa = PBXGroup;
 			children = (
 				C6AB84321A32297E00CF27BF /* emptyBG.png */,
+				C6C0D5FD1A3AA3CC00F92A85 /* user.plist */,
 				C6AB84301A32243500CF27BF /* SignUp.plist */,
 				C661179A1A2563800087B8BF /* RegistrationViewController.h */,
 				C661179B1A2563800087B8BF /* RegistrationViewController.m */,
@@ -681,6 +684,7 @@
 				C6AB806F1A20C88F00E7468C /* Icon-Small-50@2x.png in Resources */,
 				C61C994B1A2247B80090AFFB /* createown.png in Resources */,
 				C6AB84271A31E3BF00CF27BF /* tradition7.png in Resources */,
+				C6C0D5FE1A3AA3CC00F92A85 /* user.plist in Resources */,
 				C6AB84251A31E3BF00CF27BF /* tradition5.png in Resources */,
 				C630DBDC1A2030A90080B380 /* signup_form_bg.png in Resources */,
 				C630DBDA1A202C860080B380 /* uni_logo.png in Resources */,
