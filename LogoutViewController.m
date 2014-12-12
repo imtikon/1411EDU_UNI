@@ -40,7 +40,68 @@
     
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    [self refreshMyPlist];
+    
 }
+
+-(void)redirectToLogin{
+    NSString * storyboardName = @"Main_iPhone";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Login"];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)refreshMyPlist {
+    NSError* error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //1
+    NSString *documentsDirectory = [paths objectAtIndex:0]; //2
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"user.plist"]; //3
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    if (![fileManager fileExistsAtPath: path]) //4
+    {
+        NSString *bundle = [[NSBundle mainBundle] pathForResource:@"user" ofType:@"plist"]; //5
+        
+        [fileManager copyItemAtPath:bundle toPath: path error:&error]; //6
+    }
+    
+    // get documents path
+    NSString *documentsPath = [paths objectAtIndex:0];
+    // get the path to our Data/plist file
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"user.plist"];
+    // set the variables to the values in the text fields
+    NSString* userId = @"";
+    NSString* userName = @"";
+    NSString* userEmail = @"";
+    NSString* userPic = @"";
+    
+    // create dictionary with values in UITextFields
+    NSDictionary *plistDict = [NSDictionary dictionaryWithObjects: [NSArray arrayWithObjects: userId, userName, userEmail, userPic, nil] forKeys:[NSArray arrayWithObjects: @"UserId", @"UserName", @"UserEmail", @"UserPic", nil]];
+    // create NSData from dictionary
+    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
+    // check is plistData exists
+    if(plistData)
+    {
+        // write plistData to our Data.plist file
+        [plistData writeToFile:plistPath atomically:YES];
+    }
+    else
+    {
+        NSLog(@"Error in saveData: %@", error);
+    }
+    // read now
+    NSMutableDictionary *savedStock = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
+    NSLog(@"savedStock = %@",savedStock);
+    
+    NSLog(@"Logged out ...");
+    UIAlertView *errorMessage=[[UIAlertView alloc] initWithTitle:@"..Logout.." message:@"You need to login again to do browse." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [errorMessage show];
+    
+    [self redirectToLogin];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

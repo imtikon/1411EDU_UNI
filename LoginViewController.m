@@ -37,14 +37,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    /*
     if([self userLoginChecking]){
         NSLog(@"IF ... TRUE");
         // call main screen
-//        NSString * storyboardName = @"Main_iPhone";
-//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-//        UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"DashBoardScreen"];//DashBoardScreen
-//        [self presentViewController:vc animated:YES completion:nil];
+        NSString * storyboardName = @"Main_iPhone";
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+        UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Dashboard"];//DashBoardScreen
+        [self presentViewController:vc animated:YES completion:nil];
+        //[self.viewController presentViewController:vc animated:NO completion:nil];
         //[self.view addSubview:vc.view];
         //[self.navigationController pushViewController:vc animated:YES];
     }else{
@@ -56,7 +57,7 @@
         self.passwordTextField.delegate  = self;
         self.passwordTextField.tag = 2;
         //self.passwordTextField.textColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:204/255.0f alpha:1.0f];
-    }
+    }*/
     
 }
 
@@ -75,12 +76,13 @@
     }
     // read now
     NSMutableDictionary *savedStock = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
-    NSLog(@"savedStock = %@",savedStock);
+    NSLog(@"Read the Plist loading Login Screen = %@",savedStock);
     //load from savedStock example int value
     NSString* cacheUserId;
-    //cacheUserId = [[savedStock objectForKey:@"UserId"] intValue];
     cacheUserId = [savedStock objectForKey:@"UserId"];
-    NSLog(@"value = %@",cacheUserId);
+    //cacheUserId = [[savedStock objectForKey:@"UserId"] intValue];
+    //cacheUserId = [savedStock objectForKey:@"UserId"];
+    NSLog(@"Plist UserId = %@",cacheUserId);
     
     //NSLog(@"userInfo = %@",[savedStock objectForKey:@"UserInfo"]);
     // --- end ----

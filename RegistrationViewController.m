@@ -271,8 +271,8 @@
             [errorMessage show];
             
         } else {
-            //http://imtikon.com/apps/uni/register.php
-            NSURL *url = [NSURL URLWithString:@"http://4axiz.com/tradition/uni_tradition/for_android/php_files/user_registration.php"];
+            //http://4axiz.com/tradition/uni_tradition/for_android/php_files/user_registration.php
+            NSURL *url = [NSURL URLWithString:@"http://imtikon.com/apps/uni/register.php"];
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
             [request setURL:url];
             [request setHTTPMethod:@"POST"];
@@ -360,8 +360,8 @@
                         NSString *documentsDirectoryRead = [pathsRead objectAtIndex:0];
                         NSString *dataFilePathRead = [documentsDirectoryRead stringByAppendingPathComponent:@"SignUp.plist"];
                         NSDictionary *peoplesList = [[NSDictionary alloc] initWithContentsOfFile:dataFilePathRead];
-                        NSLog(@"peoplesList== %@",peoplesList);
-                        [self setCheckinPlist ];
+                        NSLog(@"After Registration Read the Plist = %@",peoplesList);
+                        //[self setCheckinPlist ];
                     }
                 }
                 
@@ -380,6 +380,10 @@
                 UIAlertView *errorMessage=[[UIAlertView alloc] initWithTitle:@"Register" message:@"Successfully Registered." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                 [errorMessage show];
                 
+                if([self writeIntoPlist:json]){
+                    [self redirectToLogin];
+                }
+                
                 //}
             }else if([[json objectForKey:@"message"] isEqualToString:@"blank"]){
                 NSLog(@"exist");
@@ -397,20 +401,65 @@
     
 }
 
--(void) setCheckinPlist
-{
-    //plist for writing file
-    NSMutableDictionary *initialCheckIn= [[NSMutableDictionary alloc] init];
-    [initialCheckIn setValue:@"0" forKey:@"counter"];
-    [initialCheckIn setValue:@"Not Checked in Yet" forKey:@"lastDate"];
+
+-(void)redirectToLogin{
+    NSString * storyboardName = @"Main_iPhone";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Login"];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+-(BOOL)writeIntoPlist:loadData{
     
+    NSLog(@"Loading Data = %@",loadData);
     
-    NSArray *pathsforCheckIn = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectoryorCheckIn = [pathsforCheckIn objectAtIndex:0];
+    NSError* error;
+    // 1) Create a list of paths.
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //1
+    // 2) Get a path to your documents directory from the list.
+    NSString *documentsDirectory = [paths objectAtIndex:0]; //2
+    // 3) Create a full file path.
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"user.plist"]; //3
+    // Load File-Manager
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    // 4) Check if file exists.
+    if (![fileManager fileExistsAtPath: path]) //4
+    {
+        // 5) Get a path to your plist created before in bundle directory (by Xcode).
+        NSString *bundle = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"plist"]; //5
+        // 6) Copy this plist to your documents directory.
+        [fileManager copyItemAtPath:bundle toPath: path error:&error]; //6
+    }
     
-    NSString *dataFilePathorCheckIn = [documentsDirectoryorCheckIn stringByAppendingPathComponent:@"CheckIn.plist"];
-    [initialCheckIn writeToFile:dataFilePathorCheckIn atomically:YES];
+    // --- next read data from plist ---
+    // get the path to our Data/plist file
+    NSString *plistPath = [documentsDirectory stringByAppendingPathComponent:@"user.plist"];
+    NSLog(@"Before write into Plist = %@",plistPath);
+    // set the variables to the values in the text fields
+    NSString* userId = [[loadData objectForKey:@"UserInfo"] objectForKey:@"id"];
+    NSString* userName = [[loadData objectForKey:@"UserInfo"] objectForKey:@"name"];
+    NSString* userEmail = [[loadData objectForKey:@"UserInfo"] objectForKey:@"email"];
+    NSString* userPic = [[loadData objectForKey:@"UserInfo"] objectForKey:@"pic"];
     
+    // create dictionary with values in UITextFields
+    NSDictionary *plistDict = [NSDictionary dictionaryWithObjects: [NSArray arrayWithObjects: userId, userName, userEmail, userPic, nil] forKeys:[NSArray arrayWithObjects: @"UserId", @"UserName", @"UserEmail", @"UserPic", nil]];
+    // create NSData from dictionary
+    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
+    // check is plistData exists
+    if(plistData)
+    {
+        // write plistData to our Data.plist file
+        [plistData writeToFile:plistPath atomically:YES];
+    }
+    else
+    {
+        NSLog(@"Error in saveData: %@", error);
+    }
+    // read now
+    NSMutableDictionary *savedStock = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
+    NSLog(@"savedStock = %@",savedStock);
+    
+    return true;
     
 }
 

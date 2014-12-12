@@ -59,7 +59,66 @@
                                                            [UIFont fontWithName:@"Helvetica-Light" size:18.0], NSFontAttributeName, nil]];
     
     
+    
+    if([self userLoginChecking]){
+        NSLog(@"APP-DELIGATE ... IF ... TRUE");
+        UIStoryboard *iPhoneV6Storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        UIViewController *initialViewController = [iPhoneV6Storyboard instantiateViewControllerWithIdentifier:@"Dashboard"];//ViewController
+        
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController  = initialViewController;
+        [self.window makeKeyAndVisible];
+        
+    }else{
+        NSLog(@"APP-DELIGATE ... ELSE ... FALSE");
+        UIStoryboard *iPhoneV6Storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        UIViewController *initialViewController = [iPhoneV6Storyboard instantiateViewControllerWithIdentifier:@"Login"];//LoginViewController
+        
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController  = initialViewController;
+        [self.window makeKeyAndVisible];
+
+    }
+    
     return YES;
+}
+
+- (BOOL)userLoginChecking{
+    
+    // --- plist read code ---
+    NSError* error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //1
+    NSString *documentsDirectory = [paths objectAtIndex:0]; //2
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"user.plist"]; //3
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath: path]) //4
+    {
+        NSString *bundle = [[NSBundle mainBundle] pathForResource:@"user" ofType:@"plist"]; //5
+        [fileManager copyItemAtPath:bundle toPath: path error:&error]; //6
+    }
+    // read now
+    NSMutableDictionary *savedStock = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
+    NSLog(@"Read the Plist loading Login Screen = %@",savedStock);
+    //load from savedStock example int value
+    NSString* cacheUserId;
+    cacheUserId = [savedStock objectForKey:@"UserId"];
+    //cacheUserId = [[savedStock objectForKey:@"UserId"] intValue];
+    //cacheUserId = [savedStock objectForKey:@"UserId"];
+    NSLog(@"Plist UserId = %@",cacheUserId);
+    
+    //NSLog(@"userInfo = %@",[savedStock objectForKey:@"UserInfo"]);
+    // --- end ----
+    
+    if([cacheUserId isEqual:@""]){
+        //if([cacheUserId isEqualToString:@""]){
+        NSLog(@"IS EMPTY");
+        return false;
+    }else{
+        NSLog(@"STOMACH IS FULL :P");
+        return true;
+    }
+    
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
