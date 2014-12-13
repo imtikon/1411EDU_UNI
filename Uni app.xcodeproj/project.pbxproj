@@ -98,6 +98,9 @@
 		C6C3B1E31A28CAEB008926F8 /* LogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C3B1E21A28CAEB008926F8 /* LogoutViewController.m */; };
 		C6C3B1E61A28CB11008926F8 /* CreateOwnListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C3B1E51A28CB11008926F8 /* CreateOwnListViewController.m */; };
 		C6C3B1EB1A28D144008926F8 /* PictureGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C3B1EA1A28D144008926F8 /* PictureGridViewController.m */; };
+		C6C804501A3C869700849140 /* university_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C8044F1A3C869700849140 /* university_icon.png */; };
+		C6C804521A3C8A0000849140 /* navigationbar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C804511A3C8A0000849140 /* navigationbar-bg.png */; };
+		C6C804541A3C8D0000849140 /* uni-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C804531A3C8D0000849140 /* uni-icon.png */; };
 		C6CE757A1A34CD18009977E3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CE75791A34CD18009977E3 /* QuartzCore.framework */; };
 		C6CE757C1A34CD23009977E3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CE757B1A34CD23009977E3 /* Social.framework */; };
 		C6CE757E1A34CD30009977E3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CE757D1A34CD30009977E3 /* AVFoundation.framework */; };
@@ -229,6 +232,9 @@
 		C6C3B1E51A28CB11008926F8 /* CreateOwnListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateOwnListViewController.m; sourceTree = "<group>"; };
 		C6C3B1E91A28D144008926F8 /* PictureGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureGridViewController.h; sourceTree = "<group>"; };
 		C6C3B1EA1A28D144008926F8 /* PictureGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureGridViewController.m; sourceTree = "<group>"; };
+		C6C8044F1A3C869700849140 /* university_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = university_icon.png; sourceTree = "<group>"; };
+		C6C804511A3C8A0000849140 /* navigationbar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar-bg.png"; sourceTree = "<group>"; };
+		C6C804531A3C8D0000849140 /* uni-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uni-icon.png"; sourceTree = "<group>"; };
 		C6CE75791A34CD18009977E3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C6CE757B1A34CD23009977E3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C6CE757D1A34CD30009977E3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -391,7 +397,10 @@
 		C630DBC71A1FA7C70080B380 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C6C804531A3C8D0000849140 /* uni-icon.png */,
+				C6C804511A3C8A0000849140 /* navigationbar-bg.png */,
 				C66117931A24FC0C0087B8BF /* menu.png */,
+				C6C8044F1A3C869700849140 /* university_icon.png */,
 				C66117941A24FC0C0087B8BF /* menu@2x.png */,
 				C61C99381A223AB90090AFFB /* Profile Pic */,
 				C630DBDD1A203CE80080B380 /* Contact */,
@@ -632,6 +641,7 @@
 				C6AB84311A32243500CF27BF /* SignUp.plist in Resources */,
 				C630DBC91A1FA7E60080B380 /* all_bg.jpg in Resources */,
 				C630DBD61A1FB0380080B380 /* splash_logo.png in Resources */,
+				C6C804501A3C869700849140 /* university_icon.png in Resources */,
 				C61C994D1A2247B80090AFFB /* listview.png in Resources */,
 				C630DBA41A1FA6B70080B380 /* Main_iPad.storyboard in Resources */,
 				C6AB806C1A20C88F00E7468C /* Icon-72.png in Resources */,
@@ -649,6 +659,7 @@
 				C6AB806D1A20C88F00E7468C /* Icon-72@2x.png in Resources */,
 				C630DBE31A203D050080B380 /* home.png in Resources */,
 				C6AB80721A20C88F00E7468C /* iTunesArtwork.png in Resources */,
+				C6C804541A3C8D0000849140 /* uni-icon.png in Resources */,
 				C61C993A1A223AC90090AFFB /* facebook_blank_face3.jpeg in Resources */,
 				C6AB80711A20C88F00E7468C /* Icon@2x.png in Resources */,
 				C630DBD11A1FAD340080B380 /* Default@2x.png in Resources */,
@@ -664,6 +675,7 @@
 				C61C99501A2247B80090AFFB /* pictureview.png in Resources */,
 				C630DBCF1A1FAD340080B380 /* Default-568h@2x.png in Resources */,
 				C6AB842D1A31E3BF00CF27BF /* tradition13.png in Resources */,
+				C6C804521A3C8A0000849140 /* navigationbar-bg.png in Resources */,
 				C61C99511A2247B80090AFFB /* about.png in Resources */,
 				C61C994F1A2247B80090AFFB /* mytraditions.png in Resources */,
 				C6AB80731A20C88F00E7468C /* iTunesArtwork@2x.png in Resources */,

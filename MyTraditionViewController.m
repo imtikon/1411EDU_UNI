@@ -41,9 +41,9 @@
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
-    UIView *statusBarView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 22)];
-    statusBarView.backgroundColor  =  [UIColor yellowColor];
-    [self.view addSubview:statusBarView];
+//    UIView *statusBarView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 22)];
+//    statusBarView.backgroundColor  =  [UIColor yellowColor];
+//    [self.view addSubview:statusBarView];
 }
 
 - (void)didReceiveMemoryWarning

@@ -45,9 +45,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigationbar-bg.png"] forBarMetrics:UIBarMetricsDefault];
+
     // Override point for customization after application launch.
     // Change the background color of navigation bar
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:38.0/255.0 green:14.0/255.0 blue:63.0/255.0 alpha:1.0]];
+   [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:38.0/255.0 green:14.0/255.0 blue:63.0/255.0 alpha:1.0]];
     
     // Change the font style of the navigation bar
     NSShadow *shadow = [[NSShadow alloc] init];

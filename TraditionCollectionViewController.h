@@ -10,4 +10,6 @@
 
 @interface TraditionCollectionViewController : UICollectionViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
 @end

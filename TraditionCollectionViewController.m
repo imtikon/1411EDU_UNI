@@ -8,6 +8,7 @@
 
 #import "TraditionCollectionViewController.h"
 #import "DetailTraditionViewController.h"
+#import "SWRevealViewController.h"
 
 @interface TraditionCollectionViewController () {
     NSArray *traditionPhotos;
@@ -21,6 +22,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Change button color
+    _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+    _sidebarButton.target = self.revealViewController;
+    _sidebarButton.action = @selector(revealToggle:);
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+
     
     // Initialize recipe image array
     traditionPhotos = [NSArray arrayWithObjects:@"tradition1.png", @"tradition2.png", @"tradition3.png", @"tradition4.png", @"tradition5.png", @"tradition6.png", @"tradition7.png", @"tradition8.png", @"tradition9.png", @"tradition10.png", @"tradition11.png", @"tradition12.png", @"tradition13.png", @"tradition1.png", @"tradition2.png", @"tradition3.png", nil];
