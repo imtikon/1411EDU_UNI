@@ -64,8 +64,57 @@
     NSString *CellIdentifier = [menuItems objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+//    cell.selectedBackgroundView.backgroundColor=[UIColor blackColor];
+//    cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    
+//    UIView *bgColorView = [[UIView alloc] init];
+//    bgColorView.backgroundColor = [UIColor colorWithRed:255.0/256.0 green:239.0/256.0 blue:49.0/256.0 alpha:1];
+//    [cell setSelectedBackgroundView:bgColorView];
+    
+    // configure your cell here
+    
+    // this is where you set your color view
+    UIView *customColorView = [[UIView alloc] init];
+    customColorView.backgroundColor = [UIColor colorWithRed:180/255.0
+                                                      green:138/255.0
+                                                       blue:171/255.0
+                                                      alpha:0.5];
+    cell.selectedBackgroundView =  customColorView;
+    
     return cell;
 }
+
+/*
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //First you get the cell you want to change
+    UITableViewCell* theCell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    //Then you change the properties (label, text, color etc..) in your case, the background color
+    theCell.contentView.backgroundColor=[UIColor redColor];
+    
+    //Deselect the cell so you can see the color change
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
+
+- (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Reset Colour.
+    UITableViewCell* theCell = [tableView cellForRowAtIndexPath:indexPath];
+    [self setCellColor:[UIColor colorWithWhite:0.961 alpha:1.000] ForCell:theCell]; //normal color
+    
+}
+
+- (void)setCellColor:(UIColor *)color ForCell:(UITableViewCell *)cell {
+    cell.contentView.backgroundColor = color;
+    cell.backgroundColor = color;
+}
+*/
+
 
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
 {

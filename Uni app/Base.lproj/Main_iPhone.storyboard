@@ -399,18 +399,18 @@
                         <color key="tintColor" red="0.56470588239999997" green="0.37647058820000001" blue="0.6588235294" alpha="1" colorSpace="deviceRGB"/>
                         <color key="separatorColor" red="0.23921568627450981" green="0.12941176470588237" blue="0.37647058823529411" alpha="1" colorSpace="deviceRGB"/>
                         <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.29803921568627451" green="0.14901960784313725" blue="0.42745098039215684" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.34509803921568627" green="0.0" blue="0.52549019607843139" alpha="1" colorSpace="deviceRGB"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.29803921570000003" green="0.14901960780000001" blue="0.42745098040000001" alpha="1" colorSpace="deviceRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="logo" rowHeight="54" id="8sQ-t0-Zxo">
-                                <rect key="frame" x="0.0" y="22" width="320" height="54"/>
+                            <tableViewCell contentMode="scaleAspectFit" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="logo" rowHeight="44" id="8sQ-t0-Zxo">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8sQ-t0-Zxo" id="sNN-GQ-LmN">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView appearanceType="aqua" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menudrawerlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="7W7-0i-4bb">
-                                            <rect key="frame" x="60" y="5" width="200" height="48"/>
+                                            <rect key="frame" x="60" y="5" width="200" height="38"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                     </subviews>
@@ -419,8 +419,8 @@
                                 <color key="tintColor" red="0.38823529411764707" green="0.21176470588235294" blue="0.58039215686274515" alpha="1" colorSpace="deviceRGB"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
-                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="about" rowHeight="44" id="61o-Cf-lnd">
-                                <rect key="frame" x="0.0" y="76" width="320" height="44"/>
+                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="about" rowHeight="44" id="61o-Cf-lnd">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="61o-Cf-lnd" id="9Zv-KC-Z0E">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -440,13 +440,13 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.29803921570000003" green="0.14901960780000001" blue="0.42745098040000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" red="0.39215686274509803" green="0.082352941176470587" blue="0.66666666666666663" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.55294117647058827" green="0.40392156862745099" blue="0.63921568627450975" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="pe4-zI-ePI" kind="custom" customClass="SWRevealViewControllerSegue" id="gyB-NG-kHr"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="createyourown" rowHeight="44" id="IOd-kv-1t0">
-                                <rect key="frame" x="0.0" y="120" width="320" height="44"/>
+                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="createyourown" rowHeight="44" id="IOd-kv-1t0">
+                                <rect key="frame" x="0.0" y="110" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IOd-kv-1t0" id="24B-ex-dey">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -466,13 +466,13 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.29803921570000003" green="0.14901960780000001" blue="0.42745098040000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" red="0.38823529410000002" green="0.21176470589999999" blue="0.58039215690000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.55294117647058827" green="0.40392156862745099" blue="0.63921568627450975" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="wgn-Ys-QRI" kind="custom" customClass="SWRevealViewControllerSegue" id="NvT-T8-HAL"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="profile" rowHeight="44" id="stF-L9-uKV">
-                                <rect key="frame" x="0.0" y="164" width="320" height="44"/>
+                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="profile" rowHeight="44" id="stF-L9-uKV">
+                                <rect key="frame" x="0.0" y="154" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="stF-L9-uKV" id="2J3-Oq-G44">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -492,13 +492,13 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.29803921570000003" green="0.14901960780000001" blue="0.42745098040000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" red="0.38823529410000002" green="0.21176470589999999" blue="0.58039215690000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.55294117647058827" green="0.40392156862745099" blue="0.63921568627450975" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="4qy-wt-CkX" kind="custom" customClass="SWRevealViewControllerSegue" id="QME-43-c4p"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="leaderboard" rowHeight="44" id="pX2-AJ-HAl">
-                                <rect key="frame" x="0.0" y="208" width="320" height="44"/>
+                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="leaderboard" rowHeight="44" id="pX2-AJ-HAl">
+                                <rect key="frame" x="0.0" y="198" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pX2-AJ-HAl" id="0yg-dF-i3g">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -518,13 +518,13 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.29803921570000003" green="0.14901960780000001" blue="0.42745098040000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" red="0.38823529410000002" green="0.21176470589999999" blue="0.58039215690000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.55294117647058827" green="0.40392156862745099" blue="0.63921568627450975" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="0i4-XO-zRl" kind="custom" customClass="SWRevealViewControllerSegue" id="oqL-or-kNj"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pictureview" rowHeight="44" id="aRO-KH-cuU">
-                                <rect key="frame" x="0.0" y="252" width="320" height="44"/>
+                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pictureview" rowHeight="44" id="aRO-KH-cuU">
+                                <rect key="frame" x="0.0" y="242" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aRO-KH-cuU" id="6Hk-7f-38C">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -544,13 +544,13 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.29803921570000003" green="0.14901960780000001" blue="0.42745098040000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" red="0.38823529410000002" green="0.21176470589999999" blue="0.58039215690000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.55294117647058827" green="0.40392156862745099" blue="0.63921568627450975" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="YN4-cn-ez1" kind="custom" customClass="SWRevealViewControllerSegue" id="6OX-KN-Evs"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listview" rowHeight="44" id="NEh-TI-2xJ">
-                                <rect key="frame" x="0.0" y="296" width="320" height="44"/>
+                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listview" rowHeight="44" id="NEh-TI-2xJ">
+                                <rect key="frame" x="0.0" y="286" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NEh-TI-2xJ" id="zVX-5p-1nj">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -570,13 +570,13 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.29803921570000003" green="0.14901960780000001" blue="0.42745098040000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" red="0.38823529410000002" green="0.21176470589999999" blue="0.58039215690000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.55294117647058827" green="0.40392156862745099" blue="0.63921568627450975" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="O48-bp-AqF" kind="custom" customClass="SWRevealViewControllerSegue" id="TR8-z5-vp6"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="calenderview" rowHeight="44" id="DTu-wp-GLY">
-                                <rect key="frame" x="0.0" y="340" width="320" height="44"/>
+                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="calenderview" rowHeight="44" id="DTu-wp-GLY">
+                                <rect key="frame" x="0.0" y="330" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DTu-wp-GLY" id="3JP-wo-fVp">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -596,13 +596,13 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.29803921570000003" green="0.14901960780000001" blue="0.42745098040000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" red="0.38823529410000002" green="0.21176470589999999" blue="0.58039215690000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.55294117647058827" green="0.40392156862745099" blue="0.63921568627450975" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="2qa-lo-a4a" kind="custom" customClass="SWRevealViewControllerSegue" id="oA5-6G-HPA"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mytraditions" rowHeight="44" id="aCx-qB-krr">
-                                <rect key="frame" x="0.0" y="384" width="320" height="44"/>
+                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="mytraditions" rowHeight="44" id="aCx-qB-krr">
+                                <rect key="frame" x="0.0" y="374" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aCx-qB-krr" id="1AO-kx-0HK">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -622,13 +622,13 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.29803921570000003" green="0.14901960780000001" blue="0.42745098040000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" red="0.38823529410000002" green="0.21176470589999999" blue="0.58039215690000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.55294117647058827" green="0.40392156862745099" blue="0.63921568627450975" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="hDH-jz-Iqi" kind="custom" customClass="SWRevealViewControllerSegue" id="48X-5c-UdT"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="logout" rowHeight="44" id="YTJ-2c-xXc">
-                                <rect key="frame" x="0.0" y="428" width="320" height="44"/>
+                            <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="logout" rowHeight="44" id="YTJ-2c-xXc">
+                                <rect key="frame" x="0.0" y="418" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YTJ-2c-xXc" id="Ais-cW-Nzq">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -648,7 +648,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.29803921570000003" green="0.14901960780000001" blue="0.42745098040000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" red="0.38823529410000002" green="0.21176470589999999" blue="0.58039215690000001" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.55294117647058827" green="0.40392156862745099" blue="0.63921568627450975" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="hLR-4h-N43" kind="custom" customClass="SWRevealViewControllerSegue" id="C9c-Ap-OmM"/>
                                 </connections>
@@ -1885,6 +1885,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zGq-bv-oaE"/>
+        <segue reference="gyB-NG-kHr"/>
     </inferredMetricsTieBreakers>
 </document>

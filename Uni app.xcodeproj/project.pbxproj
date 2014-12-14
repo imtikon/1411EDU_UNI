@@ -230,8 +230,8 @@
 		C6C3B1E21A28CAEB008926F8 /* LogoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutViewController.m; sourceTree = "<group>"; };
 		C6C3B1E41A28CB11008926F8 /* CreateOwnListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateOwnListViewController.h; sourceTree = "<group>"; };
 		C6C3B1E51A28CB11008926F8 /* CreateOwnListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateOwnListViewController.m; sourceTree = "<group>"; };
-		C6C3B1E91A28D144008926F8 /* PictureGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureGridViewController.h; sourceTree = "<group>"; };
-		C6C3B1EA1A28D144008926F8 /* PictureGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureGridViewController.m; sourceTree = "<group>"; };
+		C6C3B1E91A28D144008926F8 /* PictureGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PictureGridViewController.h; path = ../PictureGridViewController.h; sourceTree = "<group>"; };
+		C6C3B1EA1A28D144008926F8 /* PictureGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PictureGridViewController.m; path = ../PictureGridViewController.m; sourceTree = "<group>"; };
 		C6C8044F1A3C869700849140 /* university_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = university_icon.png; sourceTree = "<group>"; };
 		C6C804511A3C8A0000849140 /* navigationbar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar-bg.png"; sourceTree = "<group>"; };
 		C6C804531A3C8D0000849140 /* uni-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uni-icon.png"; sourceTree = "<group>"; };
@@ -300,8 +300,6 @@
 		C630DB811A1FA6B70080B380 = {
 			isa = PBXGroup;
 			children = (
-				C6C3B1E91A28D144008926F8 /* PictureGridViewController.h */,
-				C6C3B1EA1A28D144008926F8 /* PictureGridViewController.m */,
 				C630DB931A1FA6B70080B380 /* Uni app */,
 				C630DBB51A1FA6B80080B380 /* Uni appTests */,
 				C630DB8C1A1FA6B70080B380 /* Frameworks */,
@@ -338,6 +336,8 @@
 		C630DB931A1FA6B70080B380 /* Uni app */ = {
 			isa = PBXGroup;
 			children = (
+				C6C3B1E91A28D144008926F8 /* PictureGridViewController.h */,
+				C6C3B1EA1A28D144008926F8 /* PictureGridViewController.m */,
 				C6C3B1E81A28CBEF008926F8 /* My Profile */,
 				C6C3B1E01A28CAA5008926F8 /* Tradition */,
 				C6C3B1E71A28CBDA008926F8 /* Create Your Own */,
