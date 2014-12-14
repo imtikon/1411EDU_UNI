@@ -96,13 +96,13 @@
     switch (textField.tag) {
         case 0:
             NSLog(@"you clicked into username field.");
-            self.nameTextField.text = @" ";
+            //self.nameTextField.text = @" ";
             self.nameTextField.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
             //self.nameTextField.background= [UIImage imageNamed:@"row_1.png"];
             break;
         case 1:
             NSLog(@"you clicked into email field.");
-            self.emailTextField.text = @" ";
+            //self.emailTextField.text = @" ";
             self.emailTextField.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
             //[self hiddenDatePickerForDateofBirth];
             //[self hiddenAreaPickerForArea];
@@ -110,7 +110,7 @@
             break;
         case 2:{
             NSLog(@"you clicked into password field.");
-            self.passwordTextField.text = @" ";
+            //self.passwordTextField.text = @" ";
             self.passwordTextField.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
             //[self hiddenDatePickerForDateofBirth];
             //[self hiddenAreaPickerForArea];
@@ -120,7 +120,7 @@
         case 4:{
             [textField resignFirstResponder];
             NSLog(@"you clicked into graduation year field.");
-            self.graduationTxt.text = @" ";
+            //self.graduationTxt.text = @" ";
             self.graduationTxt.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
             //[self hiddenAreaPickerForArea];
             //self.dateOfBirthText.text=@"";
@@ -166,9 +166,9 @@
         }
         case 4:
             NSLog(@"you released graduation year field.");
-            if (![self.graduationTxt.text isEqualToString:@""]) {
-                self.graduationTxt.text = @"  Graduation Year";
-            }
+//            if (![self.graduationTxt.text isEqualToString:@""]) {
+//                //self.graduationTxt.text = @"  Graduation Year";
+//            }
             [textField resignFirstResponder];
             break;
 //        case 4:
@@ -224,7 +224,7 @@
 //    if (![self.nameTextField.text isEqualToString:@""]) {
 //        self.nameTextField.text = @"  Name";
 //    }
-    
+    /*
     if (![self.emailTextField.text isEqualToString:@""]) {
         if ([self NSStringIsValidEmail:self.emailTextField.text]) {
 
@@ -234,6 +234,7 @@
             [emailAlertMessage show];
         }
     }
+     */
 }
 
 - (IBAction)signUpAction:(id)sender {

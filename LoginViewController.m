@@ -314,11 +314,11 @@
 }
 
 
-/*- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     NSLog(@"touchesBegan:withEvent:");
     [self.view endEditing:YES];
     [super touchesBegan:touches withEvent:event];
-    if (![self.emailTextField.text isEqualToString:@""]) {
+    /*if (![self.emailTextField.text isEqualToString:@""]) {
         if ([self NSStringIsValidEmail:self.emailTextField.text]) {
 
         }else{
@@ -326,8 +326,8 @@
             UIAlertView *emailAlertMessage=[[UIAlertView alloc]initWithTitle:@"Email!" message:@"Invalid Email Id. Please enter correct email id" delegate:Nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [emailAlertMessage show];
         }
-    }
-}*/
+    }*/
+}
 
 -(BOOL) NSStringIsValidEmail:(NSString *) checkString{
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
