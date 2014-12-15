@@ -7,9 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface MyTraditionViewController : UIViewController
+@interface MyTraditionViewController : UIViewController<UIImagePickerControllerDelegate>{
+    
+    UIImagePickerController *imagePickerController;
+    IBOutlet UIImageView *imageView;
+    UIImage *imageOfThing;
+    
+}
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
+@property (strong, nonatomic) IBOutlet UILabel *captionLabel;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *uploadPhotoActivity;
+@property (strong, nonatomic) IBOutlet UIButton *takePhotoButton;
+
+- (IBAction)takePhotoAction:(UIButton *)sender;
+- (IBAction)uploadPhotoAction:(UIButton *)sender;
 
 @end

@@ -98,6 +98,7 @@
 		C6C3B1E31A28CAEB008926F8 /* LogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C3B1E21A28CAEB008926F8 /* LogoutViewController.m */; };
 		C6C3B1E61A28CB11008926F8 /* CreateOwnListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C3B1E51A28CB11008926F8 /* CreateOwnListViewController.m */; };
 		C6C3B1EB1A28D144008926F8 /* PictureGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C3B1EA1A28D144008926F8 /* PictureGridViewController.m */; };
+		C6C45BCF1A3E77E6002C89B6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C45BCE1A3E77E6002C89B6 /* FacebookSDK.framework */; };
 		C6C804501A3C869700849140 /* university_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C8044F1A3C869700849140 /* university_icon.png */; };
 		C6C804521A3C8A0000849140 /* navigationbar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C804511A3C8A0000849140 /* navigationbar-bg.png */; };
 		C6C804541A3C8D0000849140 /* uni-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C804531A3C8D0000849140 /* uni-icon.png */; };
@@ -232,6 +233,7 @@
 		C6C3B1E51A28CB11008926F8 /* CreateOwnListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateOwnListViewController.m; sourceTree = "<group>"; };
 		C6C3B1E91A28D144008926F8 /* PictureGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PictureGridViewController.h; path = ../PictureGridViewController.h; sourceTree = "<group>"; };
 		C6C3B1EA1A28D144008926F8 /* PictureGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PictureGridViewController.m; path = ../PictureGridViewController.m; sourceTree = "<group>"; };
+		C6C45BCE1A3E77E6002C89B6 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		C6C8044F1A3C869700849140 /* university_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = university_icon.png; sourceTree = "<group>"; };
 		C6C804511A3C8A0000849140 /* navigationbar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar-bg.png"; sourceTree = "<group>"; };
 		C6C804531A3C8D0000849140 /* uni-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uni-icon.png"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6CE75801A34CD9B009977E3 /* ImageIO.framework in Frameworks */,
+				C6C45BCF1A3E77E6002C89B6 /* FacebookSDK.framework in Frameworks */,
 				C6CE757E1A34CD30009977E3 /* AVFoundation.framework in Frameworks */,
 				C6CE757C1A34CD23009977E3 /* Social.framework in Frameworks */,
 				C6CE757A1A34CD18009977E3 /* QuartzCore.framework in Frameworks */,
@@ -319,6 +322,7 @@
 		C630DB8C1A1FA6B70080B380 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6C45BCE1A3E77E6002C89B6 /* FacebookSDK.framework */,
 				C6CE757F1A34CD9B009977E3 /* ImageIO.framework */,
 				C6CE757D1A34CD30009977E3 /* AVFoundation.framework */,
 				C6CE757B1A34CD23009977E3 /* Social.framework */,
@@ -874,6 +878,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Uni app/Uni app-Prefix.pch";
 				INFOPLIST_FILE = "Uni app/Uni app-Info.plist";
@@ -888,6 +896,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Uni app/Uni app-Prefix.pch";
 				INFOPLIST_FILE = "Uni app/Uni app-Info.plist";
