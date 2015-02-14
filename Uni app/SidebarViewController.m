@@ -35,7 +35,7 @@
     //self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
     //self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
     
-    menuItems = @[@"logo", @"about", @"createyourown", @"profile", @"leaderboard", @"pictureview", @"listview", @"calenderview", @"mytraditions",@"logout"];
+    menuItems = @[@"logo", @"about", @"createyourown", @"profile", @"leaderboard", @"pictureview", @"listview", @"calenderview", @"logout"];//@"mytraditions",
     NSLog(@"%@", menuItems);
 }
 
@@ -75,9 +75,9 @@
     
     // this is where you set your color view
     UIView *customColorView = [[UIView alloc] init];
-    customColorView.backgroundColor = [UIColor colorWithRed:180/255.0
-                                                      green:138/255.0
-                                                       blue:171/255.0
+    customColorView.backgroundColor = [UIColor colorWithRed:100/255.0
+                                                      green:21/255.0
+                                                       blue:170/255.0
                                                       alpha:0.5];
     cell.selectedBackgroundView =  customColorView;
     

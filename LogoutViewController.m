@@ -32,7 +32,7 @@
     self.title = @"Logout";
     
     // Change button color
-    _sidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
+    _sidebarButton.tintColor = [UIColor colorWithWhite:1.0f alpha:0.9f];
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;
@@ -41,15 +41,41 @@
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
-    [self refreshMyPlist];
+    //[self refreshMyPlist];
+    
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"email"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self redirectToLogin];
     
 }
 
 -(void)redirectToLogin{
-    NSString * storyboardName = @"Main_iPhone";
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Login"];
-    [self presentViewController:vc animated:YES completion:nil];
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenHeight = screenRect.size.height;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        if (screenHeight < 568) {
+            NSLog(@"--- 4S iPhone ===");
+            /*NSString * storyboardName = @"Main_4siPhone";
+             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+             UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Login"];
+             [self presentViewController:vc animated:YES completion:nil];*/
+        }else {
+            NSString * storyboardName = @"Main_iPhone";
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+            UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Login"];
+            [self presentViewController:vc animated:YES completion:nil];
+        }
+    }else{
+        NSLog(@"==iPad==");
+        
+        NSString * storyboardName = @"Main_iPad";
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+        UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Login"];
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+    
+    
 }
 
 - (void)refreshMyPlist {

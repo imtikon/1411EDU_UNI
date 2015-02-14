@@ -1,15 +1,14 @@
 //
-//  MyTraditionViewController.h
+//  MyOwnShootViewController.h
 //  Uni app
 //
-//  Created by Imtiaz Hossain on 11/28/14.
-//  Copyright (c) 2014 Imtiaz Hossain. All rights reserved.
+//  Created by Imtiaz Hossain on 1/29/15.
+//  Copyright (c) 2015 Imtiaz Hossain. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <FacebookSDK/FacebookSDK.h>
 
-@interface MyTraditionViewController : UIViewController<UIImagePickerControllerDelegate>{
+@interface MyOwnShootViewController : UIViewController<UIImagePickerControllerDelegate, UITextFieldDelegate>{
     
     UIImagePickerController *imagePickerController;
     IBOutlet UIImageView *imageView;
@@ -23,7 +22,13 @@
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *uploadPhotoActivity;
 @property (strong, nonatomic) IBOutlet UIButton *takePhotoButton;
 
+@property (strong, nonatomic) IBOutlet UITextField *traditionNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *eventNameTextField;
+
 - (IBAction)takePhotoAction:(UIButton *)sender;
 - (IBAction)uploadPhotoAction:(UIButton *)sender;
+
+- (IBAction)postToTwitter:(id)sender;
+- (IBAction)closePhotoWindow;
 
 @end

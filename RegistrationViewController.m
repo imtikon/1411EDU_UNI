@@ -11,7 +11,7 @@
 
 @interface RegistrationViewController ()
 
--(void) setCheckinPlist;
+//-(void) setCheckinPlist;
 @property NSArray* graduationYearArray;
 
 @end
@@ -148,10 +148,10 @@
             break;
         }
         case 4:{
-            [textField resignFirstResponder];
+            //[textField resignFirstResponder];
             NSLog(@"you clicked into graduation year field.");
             //self.graduationTxt.text = @" ";
-            self.graduationTxt.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
+            //self.graduationTxt.backgroundColor = [UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
             //[self hiddenAreaPickerForArea];
             //self.dateOfBirthText.text=@"";
             //[self showDatePickerForDateofBirth];
@@ -303,7 +303,11 @@
             
         } else {
             //http://4axiz.com/tradition/uni_tradition/for_android/php_files/user_registration.php
-            NSURL *url = [NSURL URLWithString:@"http://imtikon.com/apps/uni/register.php"];
+            //NSURL *url = [NSURL URLWithString:@"http://imtikon.com/apps/uni/register.php"];
+            //NSURL *url = [NSURL URLWithString:@"http://4axiz.com/tradition/api_iphone/user_registration"];
+            NSURL *url = [NSURL URLWithString:@"http://4axiz.com/tradition/uni_tradition/for_android/php_files/user_registration.php"];
+            
+            
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
             [request setURL:url];
             [request setHTTPMethod:@"POST"];
@@ -317,7 +321,6 @@
             [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"machine_code\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
             [body appendData:[[NSString stringWithFormat:@"%@",@"emran4axiz"] dataUsingEncoding:NSUTF8StringEncoding]];
             [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-            
             
             [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
             [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"name\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
@@ -352,13 +355,18 @@
             //    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"file_name\"; filename=\%@\r\n",_filepath] dataUsingEncoding:NSUTF8StringEncoding]];
             //    [body appendData:[[NSString stringWithString:@"Content-Type: application/octet-stream\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
             //    [body appendData:[NSData dataWithData:imageData]];
-            //
             //    [body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
             
             [request setHTTPBody:body];
             NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
             NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
             NSLog([NSString stringWithFormat:@"Image Return String: %@", returnString]);
+            
+            if([returnString  isEqual: @"success"]){
+                [self redirectToLogin];
+            }
+            
+            /*
             NSError *error;
             NSDictionary* json = [NSJSONSerialization
                                   JSONObjectWithData:returnData //1
@@ -369,7 +377,13 @@
             NSLog(@"---json--- = %@",json);
             if([[json objectForKey:@"message"] isEqualToString:@"success"] || [[json objectForKey:@"message"] isEqualToString:@"exists"])
             {
-                NSLog(@"success");
+                NSLog(@"success---");
+                UIAlertView *errorMessage=[[UIAlertView alloc] initWithTitle:@"Register" message:@"Successfully Registered." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                [errorMessage show];
+                
+                if([self writeIntoPlist:json]){
+                    [self redirectToLogin];
+                }
                 NSError *error = nil;
                 id jsonObject = [NSJSONSerialization
                                  JSONObjectWithData:returnData
@@ -377,7 +391,6 @@
                 NSDictionary *deserializedDictionary = nil;
                 if (jsonObject != nil && error == nil)
                 {
-                    
                     if ([jsonObject isKindOfClass:[NSDictionary class]]){
                         //Convert the NSData to NSDictionary in this final step
                         deserializedDictionary = (NSDictionary *)jsonObject;
@@ -408,14 +421,9 @@
                 //
                 //                }else
                 //                {
-                UIAlertView *errorMessage=[[UIAlertView alloc] initWithTitle:@"Register" message:@"Successfully Registered." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-                [errorMessage show];
-                
-                if([self writeIntoPlist:json]){
-                    [self redirectToLogin];
-                }
-                
+                 
                 //}
+                
             }else if([[json objectForKey:@"message"] isEqualToString:@"blank"]){
                 NSLog(@"exist");
                 UIAlertView *errorMessage=[[UIAlertView alloc] initWithTitle:@"..Register.." message:@"Please enter your email address." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
@@ -425,13 +433,10 @@
                 UIAlertView *errorMessage=[[UIAlertView alloc] initWithTitle:@"..Register.." message:@"Not Registered." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                 [errorMessage show];
             }
+        */
         }
-        
     }
-     
-    
 }
-
 
 -(void)redirectToLogin{
     NSString * storyboardName = @"Main_iPhone";
@@ -441,9 +446,7 @@
 }
 
 -(BOOL)writeIntoPlist:loadData{
-    
     NSLog(@"Loading Data = %@",loadData);
-    
     NSError* error;
     // 1) Create a list of paths.
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //1
@@ -481,9 +484,7 @@
     {
         // write plistData to our Data.plist file
         [plistData writeToFile:plistPath atomically:YES];
-    }
-    else
-    {
+    }else{
         NSLog(@"Error in saveData: %@", error);
     }
     // read now
@@ -497,10 +498,8 @@
 /*-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     TabBarViewController *tabBarViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"TabBarViewController"];
-    
     [tabBarViewController setSelectedIndex:2];
     [self presentViewController:tabBarViewController animated:YES completion:nil];
-    
 }*/
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
@@ -510,7 +509,6 @@
 // tell the picker how many rows are available for a given component
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     //  NSUInteger numRows = 3;
-    
     return self.graduationYearArray.count;
 }
 
@@ -522,9 +520,7 @@
 // tell the picker the title for a given component
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     NSString *title;
-    
     title = self.graduationYearArray[row];
-    
     return title;
 }
 

@@ -165,10 +165,10 @@
                 self.emailTextField.backgroundColor = [UIColor redColor];
                 self.emailTextField.background= [UIImage imageNamed:@"emptyBG.png"];
             }
-            //            if ([self.phoneNoText.text isEqualToString:@""]) {
-            //
-            //                self.phoneNoText.backgroundColor = [UIColor redColor];
-            //            }
+            if ([self.passwordTextField.text isEqualToString:@""]) {
+                self.passwordTextField.backgroundColor = [UIColor redColor];
+                self.passwordTextField.background= [UIImage imageNamed:@"emptyBG.png"];
+            }
             //
             //            if ([self.dateOfBirthText.text isEqualToString:@""]) {
             //
@@ -186,7 +186,8 @@
             
         } else {
             //NSURL *url = [NSURL URLWithString:@"http://4axiz.com/tradition/uni_tradition/for_android/php_files/get_Logni.php"];
-            NSURL *url = [NSURL URLWithString:@"http://www.imtikon.com/apps/uni/login.php"];
+            //NSURL *url = [NSURL URLWithString:@"http://www.imtikon.com/apps/uni/login.php"];
+            NSURL *url = [NSURL URLWithString:@"http://4axiz.com/tradition/api_iphone/get_login"];
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
             [request setURL:url];
             [request setHTTPMethod:@"POST"];
@@ -223,6 +224,14 @@
                                   JSONObjectWithData:returnData //1
                                   options:kNilOptions
                                   error:&error];
+            NSLog(@"Error %@",[json objectForKey:@"error"]);
+            
+            //extra code delete - later
+            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+            [userDefaults setObject:self.emailTextField.text forKey:@"email"];
+            [userDefaults synchronize];
+            //extra code delete - later
+            
             
             //            if ([returnString rangeOfString:@"success"].location == NSNotFound || [returnString rangeOfString:@"exists"].location == NSNotFound)
             //            {
@@ -230,7 +239,7 @@
             if([[json objectForKey:@"message"] isEqualToString:@"success"] || [[json objectForKey:@"message"] isEqualToString:@"exists"])
             {
                 NSLog(@"success");
-                NSError *error = nil;
+                /*NSError *error = nil;
                 id jsonObject = [NSJSONSerialization
                                  JSONObjectWithData:returnData
                                  options:NSJSONWritingPrettyPrinted error:&error];
@@ -256,12 +265,23 @@
                         
                     }
                     
-                }
+                }*/
+                
+                NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+                
+                [userDefaults setObject:self.emailTextField.text forKey:@"email"];
+                // – setBool:forKey:
+                // – setFloat:forKey:
+                // in your case 
+                [userDefaults synchronize];
 
-                UIAlertView *errorMessage=[[UIAlertView alloc] initWithTitle:@"..Login.." message:@"Successfully Logged-in." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                UIAlertView *errorMessage=[[UIAlertView alloc] initWithTitle:@"..Login.." message:[json objectForKey:@"error"] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                 [errorMessage show];
+                
+                NSLog(@"saved email = %@",[[NSUserDefaults standardUserDefaults] objectForKey:@"email"]);
                
-                NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //1
+                /*
+                 NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //1
                 NSString *documentsDirectory = [paths objectAtIndex:0]; //2
                 NSString *path = [documentsDirectory stringByAppendingPathComponent:@"user.plist"]; //3
                 
@@ -309,18 +329,46 @@
                 NSLog(@"after value = %d",value);
                 NSLog(@"after userInfo = %@",[savedStock objectForKey:@"UserInfo"]);
                 //NSLog(@"after userInfo - userId = %@",[[savedStock objectForKey:@"UserInfo"] objectForKey:@"id"]);
-                
+                */
                 
                 // call main screen
-                NSString * storyboardName = @"Main_iPhone";
-                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-                UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Dashboard"];//DashBoardScreen
-                [self presentViewController:vc animated:YES completion:nil];
+                CGRect screenRect = [[UIScreen mainScreen] bounds];
+                CGFloat screenHeight = screenRect.size.height;
+                if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+                    if (screenHeight < 568) {
+                        NSLog(@"--- 4S iPhone ===");
+                        /*NSString * storyboardName = @"Main_4siPhone";
+                         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+                         UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Dashboard"];//DashBoardScreen
+                         [self presentViewController:vc animated:YES completion:nil];*/
+                    }else {
+                        NSLog(@"== 5S iPhone ==");
+                        NSString * storyboardName = @"Main_iPhone";
+                        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+                        UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Dashboard"];//DashBoardScreen
+                        [self presentViewController:vc animated:YES completion:nil];
+                    }
+                }else{
+                    NSLog(@"==iPad==");
+                    
+                    NSString * storyboardName = @"Main_iPad";
+                    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+                    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Dashboard"];//DashBoardScreen
+                    [self presentViewController:vc animated:YES completion:nil];
+                }
                 
-            }else if([[json objectForKey:@"message"] isEqualToString:@"blank"])
+                
+//                NSString * storyboardName = @"Main_iPhone";
+//                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+//                UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"Dashboard"];//DashBoardScreen
+//                [self presentViewController:vc animated:YES completion:nil];
+                
+                
+                
+            }else if([[json objectForKey:@"message"] isEqualToString:@"failed"])
             {
                 NSLog(@"exist");
-                UIAlertView *errorMessage=[[UIAlertView alloc] initWithTitle:@"..Login.." message:@"Couldn't connect with server, please check your internet connectivity." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                UIAlertView *errorMessage=[[UIAlertView alloc] initWithTitle:@"..Login.." message:[json objectForKey:@"error"] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
                 [errorMessage show];
                 
                 NSString * storyboardName = @"Main_iPhone";

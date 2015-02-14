@@ -20,8 +20,25 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>373233756189930</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb_APP_ID_</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>FacebookAppID</key>
+	<string>373233756189930</string>
+	<key>FacebookDisplayName</key>
+	<string>Uni Tradition</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
@@ -34,8 +51,6 @@
 	</array>
 	<key>UIStatusBarHidden</key>
 	<true/>
-	<key>ViewController-Based Status Bar Appearance</key>
-	<string>NO</string>
 	<key>UIStatusBarHidden~ipad</key>
 	<true/>
 	<key>UISupportedInterfaceOrientations</key>
@@ -46,5 +61,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>ViewController-Based Status Bar Appearance</key>
+	<string>NO</string>
 </dict>
 </plist>

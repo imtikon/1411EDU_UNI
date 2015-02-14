@@ -35,11 +35,11 @@
         }
     }else{
         NSLog(@"==iPad==");
-        /*UIStoryboard *iPhoneV6Storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+        UIStoryboard *iPhoneV6Storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
         UIViewController *initialViewController = [iPhoneV6Storyboard instantiateInitialViewController];
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         self.window.rootViewController  = initialViewController;
-        [self.window makeKeyAndVisible];*/
+        [self.window makeKeyAndVisible];
     }
 }
 
@@ -60,25 +60,92 @@
                                                            shadow, NSShadowAttributeName,
                                                            [UIFont fontWithName:@"Helvetica-Light" size:18.0], NSFontAttributeName, nil]];
     
+    [self setStoryBoard];
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenHeight = screenRect.size.height;
     
-    
-    if([self userLoginChecking]){
+    //if([self userLoginChecking]){
+    if([self loadUserSettings]){
         NSLog(@"APP-DELIGATE ... IF ... TRUE");
-        UIStoryboard *iPhoneV6Storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            if (screenHeight < 568) {
+                NSLog(@"--- 4S iPhone ===");
+                /*UIStoryboard *iPhoneV6Storyboard = [UIStoryboard storyboardWithName:@"4S_Main" bundle:nil];
+                UIViewController *initialViewController = [iPhoneV6Storyboard instantiateViewControllerWithIdentifier:@"Dashboard"];
+                
+                self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+                self.window.rootViewController  = initialViewController;
+                [self.window makeKeyAndVisible];*/
+            }else {
+                NSLog(@"== 5S iPhone ==");
+                
+                UIStoryboard *iPhoneV7Storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+                UIViewController *initialViewController = [iPhoneV7Storyboard instantiateViewControllerWithIdentifier:@"Dashboard"];
+                
+                self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+                self.window.rootViewController  = initialViewController;
+                [self.window makeKeyAndVisible];
+            }
+        }else{
+            NSLog(@"==iPad==");
+            
+            UIStoryboard *iPhoneV6Storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+            UIViewController *initialViewController = [iPhoneV6Storyboard instantiateViewControllerWithIdentifier:@"Dashboard"];//ViewController
+            
+            self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+            self.window.rootViewController  = initialViewController;
+            [self.window makeKeyAndVisible];
+        }
+        
+        
+        /*UIStoryboard *iPhoneV6Storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
         UIViewController *initialViewController = [iPhoneV6Storyboard instantiateViewControllerWithIdentifier:@"Dashboard"];//ViewController
         
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         self.window.rootViewController  = initialViewController;
-        [self.window makeKeyAndVisible];
+        [self.window makeKeyAndVisible];*/
         
     }else{
         NSLog(@"APP-DELIGATE ... ELSE ... FALSE");
-        UIStoryboard *iPhoneV6Storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            if (screenHeight < 568) {
+                NSLog(@"--- 4S iPhone ===");
+                /*UIStoryboard *iPhoneV6Storyboard = [UIStoryboard storyboardWithName:@"4S_Main" bundle:nil];
+                 UIViewController *initialViewController = [iPhoneV6Storyboard instantiateViewControllerWithIdentifier:@"Login"];
+                 
+                 self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+                 self.window.rootViewController  = initialViewController;
+                 [self.window makeKeyAndVisible];*/
+            }else {
+                NSLog(@"== 5S iPhone ==");
+                
+                UIStoryboard *iPhoneV7Storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+                UIViewController *initialViewController = [iPhoneV7Storyboard instantiateViewControllerWithIdentifier:@"Login"];
+                
+                self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+                self.window.rootViewController  = initialViewController;
+                [self.window makeKeyAndVisible];
+            }
+        }else{
+            NSLog(@"==iPad==");
+            
+            UIStoryboard *iPhoneV6Storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+            UIViewController *initialViewController = [iPhoneV6Storyboard instantiateViewControllerWithIdentifier:@"Login"];//ViewController
+            
+            self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+            self.window.rootViewController  = initialViewController;
+            [self.window makeKeyAndVisible];
+        }
+        
+        
+        /*UIStoryboard *iPhoneV6Storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
         UIViewController *initialViewController = [iPhoneV6Storyboard instantiateViewControllerWithIdentifier:@"Login"];//LoginViewController
         
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         self.window.rootViewController  = initialViewController;
-        [self.window makeKeyAndVisible];
+        [self.window makeKeyAndVisible];*/
 
     }
     
@@ -121,6 +188,17 @@
     }
     
     
+}
+
+-(BOOL)loadUserSettings{
+    NSNumber*   valueEmail;
+    valueEmail = [[NSUserDefaults standardUserDefaults] objectForKey:@"email"];
+    NSLog(@"App START %@",valueEmail);
+    if(valueEmail == nil){
+         return false;
+    }else{
+        return true;
+    }
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -27,13 +27,18 @@
 
 // --- previous Code
 
-    @property(strong) UIImage *img;
-    @property (weak, nonatomic) IBOutlet UIImageView *traditionImageView;
-    @property (weak, nonatomic) IBOutlet UILabel *traditionName;
-    @property (weak, nonatomic) NSString *traditionImageName;
-    @property (weak, nonatomic) NSString *traditionImageId;
+//, Tradition_ID, Event_ID,
+@property (weak, nonatomic) NSString *Tradition_ID;
+@property (weak, nonatomic) NSString *Event_ID;
+@property (weak, nonatomic) IBOutlet UIImageView *traditionImageView;
+@property (weak, nonatomic) IBOutlet UILabel *traditionName;
+@property (weak, nonatomic) NSString *traditionImageName;
+@property (weak, nonatomic) NSString *traditionImageId;
+@property (weak, nonatomic) NSString *traditionDescription;
+@property (strong, nonatomic) IBOutlet UITextView *traditionImageCaption;
 
-    @property (strong, nonatomic) IBOutlet UITextView *traditionImageCaption;
+
+    @property(strong) UIImage *img;
 
     - (IBAction)closeView:(id)sender;
 
